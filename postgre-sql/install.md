@@ -33,12 +33,18 @@ sudo systemctl enable postgresql
 ## 检查 PostgreSQL 服务状态
 ```bash
 sudo systemctl status postgresql
+``` 
+
+## 重启 PostgreSQL 服务
+```bash
+sudo systemctl restart postgresql
 ```
-## 登录 PostgreSQL
+
+## 修改 PostgreSQL 密码
 ```bash
 sudo -u postgres psql
 ```
- 
 
-
-export NVM_DIR="$HOME/.nvm" [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  
+```sql
+ALTER USER postgres WITH PASSWORD 'new_password'; 
+```
